@@ -285,31 +285,71 @@
   ul li::marker { color: var(--summit-bronze); }
   ul li strong { color: var(--summit-navy); font-weight: 600; }
 
-  /* SUMMARY CARD */
-  .summary-card {
-    background: var(--summit-white);
-    border-radius: 8px;
-    border: 1px solid var(--summit-mist);
-    box-shadow: 0 1px 2px rgba(15,24,39,0.04);
-    padding: 32px 36px;
+  /* VISIT DETAIL CARDS — When / With / Conducted By */
+  .visit-grid {
     display: grid;
-    grid-template-columns: 220px 1fr;
-    gap: 16px 28px;
-    margin-top: 8px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin: 28px 0 36px;
   }
-  .summary-card .lbl {
+  .visit-card {
+    background: var(--summit-white);
+    border: 1px solid var(--summit-mist);
+    border-radius: 8px;
+    padding: 26px 28px;
+    border-top: 3px solid var(--summit-bronze);
+    box-shadow: 0 1px 2px rgba(15,24,39,0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .visit-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(15,24,39,0.08);
+  }
+  .vc-eyebrow {
+    font-family: var(--summit-font-display);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.20em;
+    text-transform: uppercase;
+    color: var(--summit-bronze);
+    margin-bottom: 10px;
+  }
+  .vc-title {
+    font-family: var(--summit-font-display);
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--summit-navy);
+    letter-spacing: -0.01em;
+    margin-bottom: 18px;
+    line-height: 1.2;
+  }
+  .vc-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .vc-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--summit-mist);
+    color: var(--summit-ink);
+    font-size: 14px;
+    line-height: 1.45;
+  }
+  .vc-list li:last-child { border-bottom: none; padding-bottom: 0; }
+  .vc-list li strong {
+    color: var(--summit-graphite);
     font-family: var(--summit-font-display);
     font-weight: 600;
-    color: var(--summit-graphite);
-    font-size: 11px;
+    font-size: 10px;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
-    letter-spacing: 0.16em;
-    padding-top: 4px;
+    display: block;
+    margin-bottom: 3px;
   }
-  .summary-card .val {
-    font-size: 15px; color: var(--summit-ink);
+  .vc-list li a { color: var(--summit-navy-700); }
+  @media (max-width: 880px) {
+    .visit-grid { grid-template-columns: 1fr; gap: 14px; }
   }
-  @media (max-width: 700px) { .summary-card { grid-template-columns: 1fr; gap: 4px 0; padding: 24px; } .summary-card .val { margin-bottom: 14px; } }
 
   /* SPEC GRID — Facts table style */
   .specs {
@@ -618,20 +658,55 @@
 <main>
 
   <section id="summary">
-    <div class="eyebrow">Visit Summary</div>
-    <h2>The Tour</h2>
-    <p>On May 7, 2026, I conducted a full walkthrough of the Cottonwood building with Ty, the Operations Director at Price Engineering. The notes below pull together what we observed on the tour, augmented with property-level data from the offering memorandum, lease, and recent third-party reports. Where the offering memorandum and the on-site walkthrough conflict, the on-site observations are treated as the source of truth.</p>
+    <div class="eyebrow">Site Visit</div>
+    <h2>Visit Details</h2>
+    <p>A full walkthrough of the Cottonwood building, hosted on the operations side by Price Engineering. The notes below capture what was observed on the tour, augmented with property-level data from the offering memorandum, lease, and recent third-party reports. Where the offering memorandum and the on-site walkthrough conflict, the on-site observations are treated as the source of truth.</p>
 
-    <div class="summary-card">
-      <div class="lbl">Property</div><div class="val">1175 Cottonwood Avenue, Hartland, WI 53029</div>
-      <div class="lbl">Date of Visit</div><div class="val">May 7, 2026</div>
-      <div class="lbl">Conducted By</div><div class="val">Cody Leivas, Summit Real Estate Services &mdash; <a href="mailto:cleivas@teamsummitre.com">cleivas@teamsummitre.com</a></div>
-      <div class="lbl">Met With</div><div class="val">Ty, Operations Director, Price Engineering</div>
-      <div class="lbl">Other Contact</div><div class="val">Brad Felder (out of office at time of visit)</div>
-      <div class="lbl">Tenant</div><div class="val">Price Engineering Company, LLC (a SunSource Company)</div>
-      <div class="lbl">Tenancy</div><div class="val">Original tenant — has occupied the building since it was built in 2001</div>
-      <div class="lbl">Lease Structure</div><div class="val">Triple Net (NNN), expiring December 2033</div>
+    <div class="visit-grid">
+      <div class="visit-card">
+        <div class="vc-eyebrow">When</div>
+        <div class="vc-title">May 7, 2026</div>
+        <ul class="vc-list">
+          <li><strong>Day</strong>Thursday afternoon</li>
+          <li><strong>Time on Site</strong>~30 minutes (interior walkthrough), followed by ~10 minutes of drone capture from the parking lot</li>
+          <li><strong>Weather</strong>Mid-50s, overcast, light rain rolling in</li>
+          <li><strong>Visit Type</strong>In-person, operations-led walkthrough</li>
+        </ul>
+      </div>
+
+      <div class="visit-card">
+        <div class="vc-eyebrow">With</div>
+        <div class="vc-title">Ty</div>
+        <ul class="vc-list">
+          <li><strong>Role</strong>Operations Director, Price Engineering</li>
+          <li><strong>Tenure</strong>Multi-year on-site; came over from Richfield prior to Price</li>
+          <li><strong>Other Contact</strong>Brad Felder (primary point of contact — out of office at time of visit)</li>
+          <li><strong>Tenant Entity</strong>Price Engineering Company, LLC (a SunSource Company), in the building since it was built in 2001</li>
+        </ul>
+      </div>
+
+      <div class="visit-card">
+        <div class="vc-eyebrow">Conducted By</div>
+        <div class="vc-title">Cody Leivas</div>
+        <ul class="vc-list">
+          <li><strong>Firm</strong>Summit Real Estate Services</li>
+          <li><strong>Email</strong><a href="mailto:cleivas@teamsummitre.com">cleivas@teamsummitre.com</a></li>
+          <li><strong>Capture</strong>Walkthrough notes, 30 interior/exterior photos, 17 drone photos, and a looping aerial video</li>
+          <li><strong>Representing</strong>Buyer interest evaluating the asset for acquisition</li>
+        </ul>
+      </div>
     </div>
+
+    <h3>Notable Notes from the Conversation</h3>
+    <ul>
+      <li><strong>Operations-led tour.</strong> Brad Felder (the primary scheduled contact) was out of the office, so Ty hosted the walkthrough on short notice — he proved an excellent on-the-ground source given his hands-on familiarity with the production floor.</li>
+      <li><strong>Long-tenured tenant.</strong> Price Engineering has occupied the building since it was constructed in 2001. Ty walked through how the cylinder-build wing was added on around 2013 (his recollection; OM lists 2012), accessed via the overhead door from the main warehouse.</li>
+      <li><strong>Recent capex worth noting.</strong> Tenant just re-lamped the warehouse to LED roughly 4–5 months ago — Ty pointed out how much brighter the production floor reads versus the office areas.</li>
+      <li><strong>Workforce stickiness.</strong> Ty highlighted that the company "hires for life" and keeps growing into more space organically — consistent with the OM's stat that ~35% of employees have 10+ years of tenure.</li>
+      <li><strong>Active site work.</strong> Parking-lot maintenance was underway during the visit (visible in some of the exterior photos) — typical landlord/tenant CapEx for a triple-net asset.</li>
+      <li><strong>Production floor coverage.</strong> Walkthrough covered panel shop, electrical and hydraulic shops, fabrication / cylinder-build wing, two wash bays on opposite sides of the building, the dedicated test area with multiple power configurations and oil reservoir, and the connected retail "hose store" tenant footprint at the end.</li>
+      <li><strong>Drone capture immediately after.</strong> Aerial footage and roof / parking / surrounding-context photos were captured from the lot right after the indoor tour wrapped — included in the Video and Aerials sections below.</li>
+    </ul>
   </section>
 
   <section id="snapshot">
