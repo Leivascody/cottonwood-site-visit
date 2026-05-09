@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Site Visit Report — 1175 Cottonwood Avenue, Hartland, WI</title>
+<meta property="og:title" content="Cottonwood Site Visit Report">
+<meta property="og:description" content="Price Engineering Net Lease Facility — 1175 Cottonwood Avenue, Hartland, WI">
+<meta property="og:image" content="photos/DJI_0585.JPG">
+<style>
+  :root {
+    --navy: #19273C;
+    --blue: #3B82F6;
+    --blue-soft: #DCEAFE;
+    --gray-bg: #F4F5F7;
+    --text: #2C2C2C;
+    --subtext: #6B6B6B;
+    --line: #E2E5EA;
+    --max: 1180px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+    background: #fff;
+  }
+  a { color: var(--blue); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  header.topbar {
+    position: sticky; top: 0; z-index: 50;
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .topbar-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 14px 28px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .topbar img { height: 42px; width: auto; }
+  .topbar .brand { display: flex; flex-direction: column; }
+  .topbar .brand .name { font-size: 14px; font-weight: 700; color: var(--navy); letter-spacing: 1.5px; }
+  .topbar .brand .tag { font-size: 11px; font-style: italic; color: var(--blue); }
+  .topbar nav { margin-left: auto; display: flex; gap: 22px; flex-wrap: wrap; }
+  .topbar nav a { color: var(--navy); font-size: 13px; font-weight: 600; letter-spacing: 0.4px; padding: 6px 0; }
+  .topbar nav a:hover { color: var(--blue); text-decoration: none; }
+
+  /* HERO with looping background video */
+  .hero {
+    position: relative;
+    height: 78vh; min-height: 520px;
+    overflow: hidden;
+    color: #fff;
+    display: flex; align-items: flex-end;
+    background: var(--navy);
+  }
+  .hero video.bg {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+  .hero .scrim {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(25,39,60,0.45) 0%, rgba(25,39,60,0.85) 100%);
+    z-index: 1;
+  }
+  .hero-inner {
+    position: relative; z-index: 2;
+    max-width: var(--max);
+    width: 100%; margin: 0 auto;
+    padding: 64px 28px;
+  }
+  .hero .eyebrow {
+    color: var(--blue); font-weight: 700; font-size: 13px; letter-spacing: 3px;
+    text-transform: uppercase; margin-bottom: 14px;
+  }
+  .hero h1 {
+    font-size: clamp(36px, 5.4vw, 64px);
+    font-weight: 800; letter-spacing: -0.5px;
+    line-height: 1.05; margin-bottom: 12px;
+  }
+  .hero .sub {
+    font-size: clamp(16px, 1.6vw, 20px);
+    color: #d6e3f5; max-width: 760px; margin-bottom: 22px;
+  }
+  .hero .addr {
+    display: inline-block;
+    background: var(--blue); color: #fff;
+    font-weight: 700; padding: 10px 18px;
+    border-radius: 4px; font-size: 14px; letter-spacing: 0.4px;
+  }
+
+  .stats { background: var(--navy); color: #fff; }
+  .stats-inner { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; background: rgba(255,255,255,0.1); }
+  .stat { background: var(--navy); padding: 22px 18px; text-align: center; }
+  .stat .v { font-size: 22px; font-weight: 800; color: #fff; }
+  .stat .l { font-size: 11px; color: #9bb1d3; text-transform: uppercase; letter-spacing: 1.2px; margin-top: 4px; }
+  @media (max-width: 760px) { .stats-inner { grid-template-columns: repeat(2, 1fr); } }
+
+  main { max-width: var(--max); margin: 0 auto; padding: 0 28px; }
+  section { padding: 64px 0 32px; border-bottom: 1px solid var(--line); }
+  section:last-of-type { border-bottom: none; }
+
+  .eyebrow-section { color: var(--blue); font-weight: 700; font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 8px; }
+  h2 { font-size: 32px; font-weight: 800; color: var(--navy); margin-bottom: 20px; letter-spacing: -0.3px; }
+  h2::after { content: ""; display: block; width: 56px; height: 4px; background: var(--blue); margin-top: 12px; }
+  h3 { font-size: 18px; font-weight: 700; color: var(--blue); margin: 24px 0 10px; }
+  p { margin-bottom: 14px; color: var(--text); font-size: 15px; }
+  ul { margin: 8px 0 16px 22px; }
+  ul li { margin-bottom: 6px; font-size: 15px; }
+  ul li::marker { color: var(--blue); }
+
+  .summary-card { background: var(--gray-bg); border-left: 4px solid var(--blue); padding: 24px 28px; border-radius: 6px; display: grid; grid-template-columns: 200px 1fr; gap: 14px 24px; }
+  .summary-card .lbl { font-weight: 700; color: var(--navy); font-size: 13px; text-transform: uppercase; letter-spacing: 1px; }
+  .summary-card .val { font-size: 15px; }
+  @media (max-width: 600px) { .summary-card { grid-template-columns: 1fr; gap: 4px 0; } .summary-card .val { margin-bottom: 12px; } }
+
+  .specs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 6px; overflow: hidden; margin: 16px 0; }
+  .spec { background: #fff; padding: 16px 18px; }
+  .spec .l { font-size: 11px; color: var(--subtext); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+  .spec .v { font-size: 17px; font-weight: 700; color: var(--navy); margin-top: 4px; }
+  @media (max-width: 880px) { .specs { grid-template-columns: repeat(2, 1fr); } }
+
+  .video-wrap { position: relative; background: #000; border-radius: 8px; overflow: hidden; box-shadow: 0 12px 32px rgba(25,39,60,0.18); }
+  .video-wrap video { display: block; width: 100%; height: auto; }
+  .video-caption { margin-top: 12px; color: var(--subtext); font-size: 13px; text-align: center; }
+
+  .gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 16px; }
+  .tile { display: block; aspect-ratio: 4/3; overflow: hidden; border-radius: 6px; background: var(--gray-bg); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+  .tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+  .tile:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(25,39,60,0.18); }
+  .tile:hover img { transform: scale(1.05); }
+  @media (max-width: 880px) { .gallery { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 560px) { .gallery { grid-template-columns: repeat(2, 1fr); } }
+
+  .callout { background: linear-gradient(135deg, var(--navy) 0%, #2a3e5e 100%); color: #fff; padding: 30px 32px; border-radius: 8px; margin: 24px 0; }
+  .callout p { color: #d6e3f5; }
+  .callout strong { color: #fff; }
+
+  .deficiencies { margin: 12px 0 18px; }
+  .def { display: flex; gap: 14px; padding: 14px 18px; background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--blue); border-radius: 4px; margin-bottom: 8px; }
+  .def.emergency { border-left-color: #d9534f; }
+  .def .badge { display: inline-block; font-size: 10px; font-weight: 800; letter-spacing: 1px; color: #fff; background: var(--blue); padding: 4px 8px; border-radius: 3px; text-transform: uppercase; align-self: flex-start; }
+  .def.emergency .badge { background: #d9534f; }
+  .def .body { flex: 1; font-size: 14px; }
+  .def .body strong { color: var(--navy); }
+
+  footer.bottom { background: var(--navy); color: #cdd5e1; padding: 36px 28px; margin-top: 32px; }
+  .bottom-inner { max-width: var(--max); margin: 0 auto; display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between; }
+  .bottom .brand-row { display: flex; align-items: center; gap: 14px; }
+  .bottom .brand-row img { height: 44px; }
+  .bottom .name { color: #fff; font-weight: 700; letter-spacing: 1.5px; font-size: 15px; }
+  .bottom .tag { color: var(--blue); font-style: italic; font-size: 12px; }
+  .bottom .contact { font-size: 13px; }
+  .bottom .contact strong { color: #fff; display: block; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 2px; }
+  .bottom .contact-row { display: flex; gap: 32px; flex-wrap: wrap; }
+
+  @media print {
+    header.topbar, footer.bottom, .video-wrap, .hero video.bg { display: none !important; }
+    .hero { height: 360px; min-height: 360px; }
+    section { break-inside: avoid; padding: 28px 0; }
+    .gallery { grid-template-columns: repeat(3, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <img src="_assets/summit-logo.png" alt="Summit Real Estate Services">
+    <div class="brand">
+      <span class="name">SUMMIT REAL ESTATE SERVICES</span>
+      <span class="tag">Boutique. Industrial. Integrated.</span>
+    </div>
+    <nav>
+      <a href="#summary">Summary</a>
+      <a href="#snapshot">Snapshot</a>
+      <a href="#tenant">Tenant</a>
+      <a href="#walkthrough">Walkthrough</a>
+      <a href="#video">Video</a>
+      <a href="#aerials">Aerials</a>
+      <a href="#interior">Interior</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <video class="bg" src="video/cottonwood-aerial.mp4" autoplay muted loop playsinline poster="photos/DJI_0585.JPG"></video>
+  <div class="scrim"></div>
+  <div class="hero-inner">
+    <div class="eyebrow">Site Visit Report</div>
+    <h1>Cottonwood Building</h1>
+    <div class="sub">Price Engineering Net Lease Facility — a 73,535 SF single-tenant industrial / manufacturing asset in the Waukesha Northwest submarket.</div>
+    <span class="addr">1175 COTTONWOOD AVENUE  |  HARTLAND, WI 53029</span>
+  </div>
+</div>
+
+<div class="stats">
+  <div class="stats-inner">
+    <div class="stat"><div class="v">73,535 SF</div><div class="l">Building</div></div>
+    <div class="stat"><div class="v">100%</div><div class="l">Leased</div></div>
+    <div class="stat"><div class="v">Dec 2033</div><div class="l">Lease Expiration</div></div>
+    <div class="stat"><div class="v">$8.11 PSF</div><div class="l">Starting Rent (NNN)</div></div>
+    <div class="stat"><div class="v">1.6%</div><div class="l">Submarket Vacancy</div></div>
+  </div>
+</div>
+
+<main>
+
+  <section id="summary">
+    <div class="eyebrow-section">Visit Summary</div>
+    <h2>The Tour</h2>
+    <p>On May 7, 2026, I conducted a full walkthrough of the Cottonwood building with Ty, the Operations Director at Price Engineering. The notes below pull together what we observed on the tour, augmented with property-level data from the offering memorandum, lease, and recent third-party reports. Where the offering memorandum and the on-site walkthrough conflict, the on-site observations are treated as the source of truth.</p>
+
+    <div class="summary-card">
+      <div class="lbl">Property</div><div class="val">1175 Cottonwood Avenue, Hartland, WI 53029</div>
+      <div class="lbl">Date of Visit</div><div class="val">May 7, 2026</div>
+      <div class="lbl">Conducted By</div><div class="val">Cody Leivas, Summit Real Estate Services &mdash; <a href="mailto:cleivas@teamsummitre.com">cleivas@teamsummitre.com</a></div>
+      <div class="lbl">Met With</div><div class="val">Ty, Operations Director, Price Engineering</div>
+      <div class="lbl">Other Contact</div><div class="val">Brad Felder (out of office at time of visit)</div>
+      <div class="lbl">Tenant</div><div class="val">Price Engineering Company, LLC (a SunSource Company)</div>
+      <div class="lbl">Tenancy</div><div class="val">Original tenant — has occupied the building since it was built in 2001</div>
+      <div class="lbl">Lease Structure</div><div class="val">Triple Net (NNN), expiring December 2033</div>
+    </div>
+  </section>
+
+  <section id="snapshot">
+    <div class="eyebrow-section">Property Snapshot</div>
+    <h2>Building & Site</h2>
+    <p>1175 Cottonwood Avenue is a 73,535 SF single-tenant industrial / manufacturing facility located in the Waukesha Northwest submarket of Greater Milwaukee. The building was originally constructed in 2001 and expanded with the cylinder-build wing around 2013 (per Ty on the walkthrough). It is 100% leased to Price Engineering, which recently signed an 8-year lease extension running through December 2033 at a starting rent of $8.11 PSF NNN. The asset is being marketed by CBRE National Partners.</p>
+
+    <div class="specs">
+      <div class="spec"><div class="l">Building SF</div><div class="v">73,535 SF</div></div>
+      <div class="spec"><div class="l">Office SF</div><div class="v">20,590 SF (28%)</div></div>
+      <div class="spec"><div class="l">Year Built / Expansion</div><div class="v">2001 / ~2013</div></div>
+      <div class="spec"><div class="l">Site Area</div><div class="v">8.07 Acres</div></div>
+      <div class="spec"><div class="l">Clear Height</div><div class="v">22'</div></div>
+      <div class="spec"><div class="l">Column Spacing</div><div class="v">50'</div></div>
+      <div class="spec"><div class="l">Dock Doors</div><div class="v">4</div></div>
+      <div class="spec"><div class="l">Drive-In Doors</div><div class="v">3</div></div>
+      <div class="spec"><div class="l">Truck Court Depth</div><div class="v">140'</div></div>
+      <div class="spec"><div class="l">Car Parking</div><div class="v">128</div></div>
+      <div class="spec"><div class="l">Power</div><div class="v">1,600 amps, 480V</div></div>
+      <div class="spec"><div class="l">Fire Protection</div><div class="v">Wet</div></div>
+      <div class="spec"><div class="l">Exterior Walls</div><div class="v">Tilt-up Precast</div></div>
+      <div class="spec"><div class="l">Roof</div><div class="v">.45 mil EPDM Ballasted</div></div>
+      <div class="spec"><div class="l">Warehouse Lighting</div><div class="v">LED (Recently Re-Lamped)</div></div>
+      <div class="spec"><div class="l">Cranes</div><div class="v">~3 Bridge / ~12 Jib</div></div>
+    </div>
+  </section>
+
+  <section id="tenant">
+    <div class="eyebrow-section">Tenant Overview</div>
+    <h2>Price Engineering</h2>
+    <p>Price Engineering, founded in 1953, is headquartered at the Cottonwood building and was acquired by SunSource — a nationwide private equity-backed leader in industrial and mobile fluid power distribution — in 2018. The company specializes in engineering and distributing fully-integrated hydraulic, pneumatic, electrical, and automation systems, and partners with suppliers including Eaton, Enerpac, and Festo. End markets include mining, construction, marine, wind energy, rail, extrusion, pulp & paper, foundries, and food processing.</p>
+    <p>Price employs approximately 120 people across all locations, with roughly 105 based here in Hartland. The company has long held a "hire for life" approach — about 35% of employees have 10+ years of service — and is ISO 9001:2005 certified. Per Ty, the business has grown over time and has organically taken over more and more space within the building as customer demand has evolved, a strong indicator of long-term commitment to this location.</p>
+    <p>Price also operates a secondary shop on Silver Spring (described by Ty as more pump-and-burst in style). That location is used primarily for storage, internal training on sensors, and a couple of small labs. The Cottonwood facility remains the primary distribution, fabrication, assembly, and headquarters hub.</p>
+  </section>
+
+  <section id="walkthrough">
+    <div class="eyebrow-section">On-Site Observations</div>
+    <h2>Building Walkthrough</h2>
+
+    <h3>Layout & Use</h3>
+    <ul>
+      <li>Roughly 28% office build-out (20,590 SF) tied to the warehouse and shop floor; the balance is dedicated to manufacturing, distribution, and service operations.</li>
+      <li>Main warehouse is the original 2001 section of the building.</li>
+      <li>The wing where the cylinders are built — accessed through the overhead door from the main warehouse — is the expansion built around 2013 per Ty during the walkthrough.</li>
+      <li>Operations include a panel shop, electrical shop, hydraulic shop, and fabrication area dedicated to building cylinders, including front-end loader cylinders.</li>
+      <li>A separate retail "hose store" tenant footprint is connected at the end of the building.</li>
+    </ul>
+
+    <h3>Cranes & Material Handling</h3>
+    <ul>
+      <li>Approximately 3 bridge cranes throughout the production floor (per Ty on the walkthrough).</li>
+      <li>Approximately 12 jib cranes distributed across the production areas (per Ty on the walkthrough).</li>
+      <li>Crane systems are integral to Price's design, manufacturing, and testing operations and would require significant capital and operational downtime to relocate.</li>
+      <li>Loading: 4 dock doors, 3 drive-in doors, 140' truck court depth — adequate for current operations.</li>
+    </ul>
+
+    <h3>Wash Bays & Cleaning</h3>
+    <ul>
+      <li>Wash bay on one side of the building used for wiping down and cleaning equipment.</li>
+      <li>Second wash bay located on the opposite side of the building.</li>
+      <li>Part flusher located adjacent to the wash bay area.</li>
+    </ul>
+
+    <h3>Test Equipment</h3>
+    <ul>
+      <li>Dedicated test area with multiple power units used to test built equipment before shipment.</li>
+      <li>Varying types of power are available at the test stations to match different customer specs.</li>
+      <li>Oil reservoir is integrated into the testing setup.</li>
+      <li>Test pulpit is in place and operational.</li>
+    </ul>
+
+    <h3>Building Systems & Condition</h3>
+    <ul>
+      <li><strong>Lighting:</strong> warehouse is LED (recently re-lamped — bulbs changed approximately 4–5 months ago per Ty); service/repair areas are HID. Lighting in the warehouse is noticeably brighter than in the office areas.</li>
+      <li><strong>Roof:</strong> .45 mil EPDM ballasted on both the original 2001 building and the ~2013 addition. No active issues reported by tenant. (See March 2026 inspection findings below.)</li>
+      <li><strong>Windows:</strong> no leaks reported.</li>
+      <li><strong>Fire protection:</strong> building is wet-sprinklered throughout the warehouse.</li>
+      <li><strong>Power:</strong> 1,600 amps at 480V supports the heavy-duty production equipment.</li>
+      <li><strong>Construction:</strong> tilt-up precast concrete exterior — durable construction quality stood out during the walkthrough.</li>
+    </ul>
+
+    <h3>Site / Exterior</h3>
+    <ul>
+      <li>8.07-acre site with FAR of 0.21, providing meaningful expansion / outdoor storage flexibility.</li>
+      <li>128 car parking spaces — adequate for the ~105-person Hartland workforce.</li>
+      <li>Parking lot maintenance is currently underway at the property.</li>
+      <li><strong>Access:</strong> 2.7 miles to I-94, 2.1 miles to Hwy 16; 26.8 miles to downtown Milwaukee and 32.6 miles to Mitchell International Airport.</li>
+      <li>Tenant primarily employs people locally; access for the local workforce is good.</li>
+    </ul>
+  </section>
+
+  <section id="video">
+    <div class="eyebrow-section">Drone Walkthrough</div>
+    <h2>Aerial Video</h2>
+    <p>Drone footage captured during the May 7, 2026 site visit, showing the building footprint, parking, truck court, and surrounding industrial park.</p>
+    <div class="video-wrap">
+      <video src="video/cottonwood-aerial.mp4" autoplay muted loop playsinline controls poster="photos/DJI_0585.JPG"></video>
+    </div>
+    <div class="video-caption">Auto-playing on loop — click controls to pause or unmute.</div>
+  </section>
+
+  <section id="aerials">
+    <div class="eyebrow-section">Aerial Photography</div>
+    <h2>Drone Photos (17)</h2>
+    <p>Aerials of the building, roof, parking, truck court, surrounding industrial neighbors, and site context. Click any tile to open the full-resolution image.</p>
+    <div class="gallery">
+      <a class="tile" href="photos/DJI_0585.JPG" target="_blank"><img src="photos/DJI_0585.JPG" loading="lazy" alt="Aerial of 1175 Cottonwood"></a>
+      <a class="tile" href="photos/DJI_0586.JPG" target="_blank"><img src="photos/DJI_0586.JPG" loading="lazy" alt="Aerial of 1175 Cottonwood"></a>
+      <a class="tile" href="photos/DJI_0587.JPG" target="_blank"><img src="photos/DJI_0587.JPG" loading="lazy" alt="Aerial of 1175 Cottonwood"></a>
+      <a class="tile" href="photos/DJI_0588.JPG" target="_blank"><img src="photos/DJI_0588.JPG" loading="lazy" alt="Aerial of 1175 Cottonwood"></a>
+      <a class="tile" href="photos/DJI_0589.JPG" target="_blank"><img src="photos/DJI_0589.JPG" loading="lazy" alt="Aerial of 1175 Cottonwood"></a>
+      <a class="tile" href="photos/DJI_0590.JPG" target="_blank"><img src="photos/DJI_0590.JPG" loading="lazy" alt="Aerial of 1175 Cottonwood"></a>
+      <a class="tile" href="photos/DJI_0591.JPG" target="_blank"><img src="photos/DJI_0591.JPG" loading="lazy" alt="Aerial of 1175 Cottonwood"></a>
+      <a class="tile" href="photos/DJI_0592.JPG" target="_blank"><img src="photos/DJI_0592.JPG" loading="lazy" alt="Aerial of 1175 Cottonwood"></a>
+      <a class="tile" href="photos/DJI_0593.JPG" target="_blank"><img src="photos/DJI_0593.JPG" loading="lazy" alt="Aerial of 1175 Cottonwood"></a>
+      <a class="tile" href="photos/DJI_0594.JPG" target="_blank"><img src="photos/DJI_0594.JPG" loading="lazy" alt="Aerial of 1175 Cottonwood"></a>
+      <a class="tile" href="photos/DJI_0595.JPG" target="_blank"><img src="photos/DJI_0595.JPG" loading="lazy" alt="Aerial of 1175 Cottonwood"></a>
+      <a class="tile" href="photos/DJI_0596.JPG" target="_blank"><img src="photos/DJI_0596.JPG" loading="lazy" alt="Aerial of 1175 Cottonwood"></a>
+      <a class="tile" href="photos/DJI_0597.JPG" target="_blank"><img src="photos/DJI_0597.JPG" loading="lazy" alt="Aerial of 1175 Cottonwood"></a>
+      <a class="tile" href="photos/DJI_0598.JPG" target="_blank"><img src="photos/DJI_0598.JPG" loading="lazy" alt="Aerial of 1175 Cottonwood"></a>
+      <a class="tile" href="photos/DJI_0599.JPG" target="_blank"><img src="photos/DJI_0599.JPG" loading="lazy" alt="Aerial of 1175 Cottonwood"></a>
+      <a class="tile" href="photos/DJI_0600.JPG" target="_blank"><img src="photos/DJI_0600.JPG" loading="lazy" alt="Aerial of 1175 Cottonwood"></a>
+      <a class="tile" href="photos/DJI_0601.JPG" target="_blank"><img src="photos/DJI_0601.JPG" loading="lazy" alt="Aerial of 1175 Cottonwood"></a>
+    </div>
+  </section>
+
+  <section id="interior">
+    <div class="eyebrow-section">On-Site Photography</div>
+    <h2>Interior & Exterior Photos (30)</h2>
+    <p>Photos taken during the walkthrough with Ty — production floor, cranes, wash bays, test equipment, office areas, and exterior details.</p>
+    <div class="gallery">
+      <a class="tile" href="photos/IMG_4336.jpg" target="_blank"><img src="photos/IMG_4336.jpg" loading="lazy" alt="Site visit photo"></a>
+      <a class="tile" href="photos/IMG_4337.jpg" target="_blank"><img src="photos/IMG_4337.jpg" loading="lazy" alt="Site visit photo"></a>
+      <a class="tile" href="photos/IMG_4338.jpg" target="_blank"><img src="photos/IMG_4338.jpg" loading="lazy" alt="Site visit photo"></a>
+      <a class="tile" href="photos/IMG_4339.jpg" target="_blank"><img src="photos/IMG_4339.jpg" loading="lazy" alt="Site visit photo"></a>
+      <a class="tile" href="photos/IMG_4340.jpg" target="_blank"><img src="photos/IMG_4340.jpg" loading="lazy" alt="Site visit photo"></a>
+      <a class="tile" href="photos/IMG_4341.jpg" target="_blank"><img src="photos/IMG_4341.jpg" loading="lazy" alt="Site visit photo"></a>
+      <a class="tile" href="photos/IMG_4342.jpg" target="_blank"><img src="photos/IMG_4342.jpg" loading="lazy" alt="Site visit photo"></a>
+      <a class="tile" href="photos/IMG_4343.jpg" target="_blank"><img src="photos/IMG_4343.jpg" loading="lazy" alt="Site visit photo"></a>
+      <a class="tile" href="photos/IMG_4344.jpg" target="_blank"><img src="photos/IMG_4344.jpg" loading="lazy" alt="Site visit photo"></a>
+      <a class="tile" href="photos/IMG_4345.jpg" target="_blank"><img src="photos/IMG_4345.jpg" loading="lazy" alt="Site visit photo"></a>
+      <a class="tile" href="photos/IMG_4346.jpg" target="_blank"><img src="photos/IMG_4346.jpg" loading="lazy" alt="Site visit photo"></a>
+      <a class="tile" href="photos/IMG_4347.jpg" target="_blank"><img src="photos/IMG_4347.jpg" loading="lazy" alt="Site visit photo"></a>
+      <a class="tile" href="photos/IMG_4348.jpg" target="_blank"><img src="photos/IMG_4348.jpg" loading="lazy" alt="Site visit photo"></a>
+      <a class="tile" href="photos/IMG_4349.jpg" target="_blank"><img src="photos/IMG_4349.jpg" loading="lazy" alt="Site visit photo"></a>
+      <a class="tile" href="photos/IMG_4350.jpg" target="_blank"><img src="photos/IMG_4350.jpg" loading="lazy" alt="Site visit photo"></a>
+      <a class="tile" href="photos/IMG_4351.jpg" target="_blank"><img src="photos/IMG_4351.jpg" loading="lazy" alt="Site visit photo"></a>
+      <a class="tile" href="photos/IMG_4352.jpg" target="_blank"><img src="photos/IMG_4352.jpg" loading="lazy" alt="Site visit photo"></a>
+      <a class="tile" href="photos/IMG_4353.jpg" target="_blank"><img src="photos/IMG_4353.jpg" loading="lazy" alt="Site visit photo"></a>
+      <a class="tile" href="photos/IMG_4354.jpg" target="_blank"><img src="photos/IMG_4354.jpg" loading="lazy" alt="Site visit photo"></a>
+      <a class="tile" href="photos/IMG_4355.jpg" target="_blank"><img src="photos/IMG_4355.jpg" loading="lazy" alt="Site visit photo"></a>
+      <a class="tile" href="photos/IMG_4356.jpg" target="_blank"><img src="photos/IMG_4356.jpg" loading="lazy" alt="Site visit photo"></a>
+      <a class="tile" href="photos/IMG_4357.jpg" target="_blank"><img src="photos/IMG_4357.jpg" loading="lazy" alt="Site visit photo"></a>
+      <a class="tile" href="photos/IMG_4358.jpg" target="_blank"><img src="photos/IMG_4358.jpg" loading="lazy" alt="Site visit photo"></a>
+      <a class="tile" href="photos/IMG_4359.jpg" target="_blank"><img src="photos/IMG_4359.jpg" loading="lazy" alt="Site visit photo"></a>
+      <a class="tile" href="photos/IMG_4360.jpg" target="_blank"><img src="photos/IMG_4360.jpg" loading="lazy" alt="Site visit photo"></a>
+      <a class="tile" href="photos/IMG_4361.jpg" target="_blank"><img src="photos/IMG_4361.jpg" loading="lazy" alt="Site visit photo"></a>
+      <a class="tile" href="photos/IMG_4362.jpg" target="_blank"><img src="photos/IMG_4362.jpg" loading="lazy" alt="Site visit photo"></a>
+      <a class="tile" href="photos/IMG_4363.jpg" target="_blank"><img src="photos/IMG_4363.jpg" loading="lazy" alt="Site visit photo"></a>
+      <a class="tile" href="photos/IMG_4364.jpg" target="_blank"><img src="photos/IMG_4364.jpg" loading="lazy" alt="Site visit photo"></a>
+      <a class="tile" href="photos/IMG_4365.jpg" target="_blank"><img src="photos/IMG_4365.jpg" loading="lazy" alt="Site visit photo"></a>
+    </div>
+  </section>
+
+  <section id="roof">
+    <div class="eyebrow-section">Third-Party Reports</div>
+    <h2>Roof Condition (March 2026 Inspection)</h2>
+    <p>Quality Trusted Commercial completed a roof inspection on March 25, 2026. The 74,608 SF of roof area is divided into 5 sections; all 5 sections received an overall grade of <strong>B (8–10 years of remaining service life)</strong>. Three deficiencies were noted on the main roof section (Section 1, 48,654 SF):</p>
+    <div class="deficiencies">
+      <div class="def emergency">
+        <span class="badge">Emergency</span>
+        <div class="body"><strong>Improper Installation</strong> — 1 detail flagged for removal and reinstallation per manufacturer specs.</div>
+      </div>
+      <div class="def emergency">
+        <span class="badge">Emergency</span>
+        <div class="body"><strong>Tenting</strong> — approximately 5 LF of membrane tenting at perimeter flashing; recommended to cut, relax, and splice in new flashing membrane.</div>
+      </div>
+      <div class="def">
+        <span class="badge">Maintenance</span>
+        <div class="body"><strong>Ballast Redistribution</strong> — ballast unevenly distributed in spots; recommended to be added/redistributed.</div>
+      </div>
+    </div>
+    <p>Net takeaway: the roof is in serviceable condition with several years of useful life remaining, but the two emergency items should be addressed near-term to protect against water intrusion.</p>
+  </section>
+
+  <section id="market">
+    <div class="eyebrow-section">Market Context</div>
+    <h2>Waukesha Northwest Submarket</h2>
+    <p>The Cottonwood asset sits in the Waukesha Northwest submarket — one of the tightest industrial submarkets in Greater Milwaukee. As of Q3 2025, the submarket carried a direct vacancy rate of just <strong>1.6%</strong>, approximately 340 bps below the overall Milwaukee market average of 5.0%. Vacancy across all Milwaukee buildings under 100,000 SF was 1.7% — the lowest of any size segment in the market. With limited remaining development land in Waukesha County and a deep base of skilled industrial labor, this submarket is well positioned for continued tenant demand and rent growth.</p>
+  </section>
+
+  <section id="thesis">
+    <div class="eyebrow-section">Investment View</div>
+    <h2>Investment Considerations</h2>
+    <p>From the buyer's perspective, the strategy is to keep operations substantially the same post-acquisition. The combination of the tenant's long tenure (since the building was constructed in 2001), continued organic expansion within the footprint, ownership by SunSource (a private equity-backed national platform), the recently executed 8-year lease extension through December 2033 at $8.11 PSF NNN, and a 1.6% submarket vacancy rate all support a stable, durable income profile.</p>
+    <p>The primary underwriting risk is single-tenant concentration: if Price Engineering were to vacate, re-tenanting would be a meaningful lift given the highly built-out and purpose-specific nature of the space (~3 bridge cranes, ~12 jib cranes, multiple wash bays, test stations with multiple power units and oil reservoir, hydraulic and electrical shops, 1,600A/480V power). However, the heavy in-place equipment, the workforce stickiness (35% of employees with 10+ years of tenure), the recent lease extension, and the tenant's consistent organic expansion within the building all materially lower the probability of departure in the near to medium term.</p>
+
+    <div class="callout">
+      <p><strong>Overall impression:</strong> a well-maintained, purpose-built industrial facility actively used by a long-tenured, financially-backed tenant with a recently extended lease running through 2033. Construction quality stood out during the walkthrough — tilt-up precast, 22' clear, 50' column spacing, multiple bridge and jib cranes, and 1,600A/480V service. Combined with sub-2% submarket vacancy in a supply-constrained Waukesha County market, the asset reads as a high-quality, single-tenant net lease opportunity worth advancing in due diligence.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="bottom">
+  <div class="bottom-inner">
+    <div class="brand-row">
+      <img src="_assets/summit-logo.png" alt="Summit">
+      <div>
+        <div class="name">SUMMIT REAL ESTATE SERVICES</div>
+        <div class="tag">Boutique. Industrial. Integrated.</div>
+      </div>
+    </div>
+    <div class="contact-row">
+      <div class="contact"><strong>Prepared By</strong>Cody Leivas</div>
+      <div class="contact"><strong>Email</strong><a href="mailto:cleivas@teamsummitre.com" style="color:#cdd5e1">cleivas@teamsummitre.com</a></div>
+      <div class="contact"><strong>Web</strong>teamsummitre.com</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
